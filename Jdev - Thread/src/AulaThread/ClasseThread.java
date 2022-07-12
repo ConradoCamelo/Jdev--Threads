@@ -12,7 +12,11 @@ public class ClasseThread {
 			
 				for (int i = 0; i < 5; i++) {
 					
-					Thread.sleep(1000);//Isso vai fazer com que o programa demore um 1 segundo para imprimir de um laço para o outro. 
+					try {
+						Thread.sleep(1000);//Isso vai fazer com que o programa demore um 1 segundo para imprimir de um laço para o outro. 
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
 					
 					System.out.println("Executando alguma rotina para trabalho e Envio de E-mail ");
 				}
